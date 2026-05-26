@@ -16,239 +16,291 @@
   <link href='https://fonts.googleapis.com/css?family=Dosis|Raleway' rel='stylesheet' type='text/css'>
 
   <style type="text/css">
-    :root {
-      --bg-base: #f2efe9;
-      --bg-depth: #f2efe9;
-      --card-surface: #f5f1ed;
-      --card-border: #e4d9d2;
-      --highlight-surface: #f2e6df;
-      --highlight-border: #ddbdac;
-      --highlight-accent: #b56b4d;
-      --topic-ink: #6b4c3e;
-      --topic-rule: rgba(107, 76, 62, 0.28);
-    }
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --surface-alt: #fcfcfd;
 
-    html,
+    --border: #e5e7eb;
+    --border-strong: #d1d5db;
+
+    --text: #111827;
+    --text-light: #4b5563;
+    --muted: #6b7280;
+
+    --accent: #2563eb;
+
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 6px 20px rgba(0,0,0,0.06);
+
+    --radius: 14px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+  }
+
+  body {
+    padding: 40px 20px 80px;
+  }
+
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  /* Typography */
+
+  h1,
+  h2,
+  h3 {
+    color: var(--text);
+    margin-top: 0;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+
+  p {
+    color: var(--text-light);
+    margin-top: 0;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  a:hover {
+    opacity: 0.7;
+  }
+
+  /* Profile */
+
+  .profile-flex {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+    padding: 36px;
+
+    box-shadow: var(--shadow-sm);
+
+    margin-bottom: 56px;
+  }
+
+  .profile-img {
+    flex: 0 0 180px;
+  }
+
+  .profile-img img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+
+    border-radius: 16px;
+    display: block;
+  }
+
+  .profile-info {
+    flex: 1;
+  }
+
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 20px;
+  }
+
+  .social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--text-light);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .social-links i {
+    font-size: 1rem;
+  }
+
+  /* Sections */
+
+  section {
+    margin-bottom: 60px;
+  }
+
+  .news ul {
+    padding-left: 18px;
+    color: var(--text-light);
+  }
+
+  /* Topic header */
+
+  .pub-topic-header {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    color: var(--muted);
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Publication cards */
+
+  .pub-entry {
+    display: flex;
+    gap: 28px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 28px;
+
+    margin-bottom: 28px;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .pub-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-strong);
+  }
+
+  .pub-entry.highlight {
+    border-left: 4px solid var(--accent);
+  }
+
+  .pub-img {
+    flex: 0 0 220px;
+  }
+
+  .pub-img img {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+
+    border-radius: 12px;
+    background: #f9fafb;
+    padding: 10px;
+  }
+
+  .pub-info {
+    flex: 1;
+  }
+
+  .pub-info h3 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .pub-meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+  }
+
+  .pub-info a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-right: 18px;
+    margin-bottom: 10px;
+
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  .pub-info p {
+    margin-top: 14px;
+  }
+
+  /* Mobile */
+
+  @media (max-width: 720px) {
+
     body {
-      background-color: var(--bg-base) !important;
+      padding: 24px 16px 60px;
     }
 
-    body {
-      min-height: 100vh;
-      background-image:
-        radial-gradient(1200px 700px at 50% -220px, rgba(255, 255, 255, 0.52), transparent 60%),
-        linear-gradient(180deg, var(--bg-base) 0%, var(--bg-depth) 100%);
-    }
-
-    .container {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 0 10px;
-      background: transparent !important;
-    }
-
-    h1,
-    .site-title {
-      font-family: 'Raleway', sans-serif;
-      font-size: 32px;
-      letter-spacing: -1px;
-      text-align: center;
-      padding-top: 1em;
-      margin-bottom: 0.5em;
-    }
-
-    @media screen and (min-width: 550px) {
-      h1,
-      .site-title {
-        font-size: 46px;
-      }
+    h1 {
+      font-size: 2.2rem;
     }
 
     .profile-flex {
-      display: flex;
-      flex-direction: row;
-      gap: 30px;
-      align-items: flex-start;
-      margin-top: 1em;
-    }
-
-    .profile-img {
-      flex: 0 0 200px;
-      max-width: 200px;
-    }
-
-    .profile-img img {
-      width: 100%;
-      max-width: 200px;
-      border-radius: 8px;
-    }
-
-    .profile-info {
-      flex: 1;
+      flex-direction: column-reverse;
+      text-align: center;
+      padding: 28px;
     }
 
     .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
       justify-content: center;
-      margin-bottom: 1em;
-    }
-
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .social-links a i {
-      margin-right: 0.4em;
-      font-size: 1.5em;
-    }
-
-    .news {
-      padding: 15px 0;
-      margin-bottom: 10px;
-    }
-
-    .news ul {
-      margin-left: 20px;
-      padding-left: 0;
     }
 
     .pub-entry {
-      display: flex;
-      flex-direction: row;
-      gap: 24px;
-      align-items: flex-start;
-      margin-bottom: 32px;
-      padding: 20px;
-      border-radius: 8px;
-      flex-wrap: wrap;
-      background: var(--card-surface);
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .pub-entry:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .pub-entry.highlight {
-      background: var(--highlight-surface);
-      border: 1px solid var(--highlight-border);
-      box-shadow: inset 4px 0 0 var(--highlight-accent),
-        0 1px 2px rgba(0, 0, 0, 0.04);
+      flex-direction: column;
     }
 
     .pub-img {
-      flex: 0 0 290px;
-      max-width: 290px;
-      min-width: 200px;
+      flex: none;
     }
 
     .pub-img img {
-      width: 260px;
-      height: 260px;
-      object-fit: contain;
-      border-radius: 8px;
-      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 260px;
       margin: 0 auto;
+      display: block;
     }
-
-    .pub-info {
-      flex: 1 1 200px;
-      min-width: 180px;
-    }
-
-    .pub-info h3 {
-      margin-bottom: 0.5em;
-      margin-top: 0;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 1.5;
-    }
-
-    .pub-meta {
-      margin-bottom: 0.5em;
-      margin-top: 0;
-    }
-
-    .pub-info>a {
-      margin-right: 1em;
-      margin-bottom: 0.3em;
-    }
-
-    .pub-info>a i {
-      margin-right: 0.3em;
-    }
-
-    .pub-topic-header {
-      font-family: 'Dosis', 'Raleway', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      color: var(--topic-ink);
-      margin-top: 40px;
-      margin-bottom: 18px;
-      letter-spacing: 0.08em;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .pub-topic-header::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(to right, var(--topic-rule), transparent);
-    }
-
-    @media (max-width: 600px) {
-
-      .profile-flex {
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .profile-info {
-        text-align: center;
-      }
-
-      .profile-img {
-        max-width: 180px;
-      }
-
-      .pub-entry {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
-      }
-
-      .pub-img,
-      .pub-info {
-        max-width: 100%;
-      }
-
-      .pub-img img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .pub-info {
-        text-align: center;
-      }
-
-      .pub-topic-header {
-        display: block;
-        text-align: center;
-      }
-
-      .pub-topic-header::after {
-        display: none;
-      }
-    }
+  }
   </style>
 </head>
 
