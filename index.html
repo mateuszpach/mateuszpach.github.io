@@ -4,303 +4,338 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name</title>
+  <title>Your Name | Academic Portfolio</title>
 
-  <!-- Optional favicon -->
   <link rel="shortcut icon" href="imgs/favicon/favicon.ico" type="image/x-icon">
 
-  <!-- Fonts / Icons -->
-  <link type="text/css" rel="stylesheet" href="css/main.css">
-  <link type="text/css" rel="stylesheet" href="css/fira_font.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Dosis|Raleway' rel='stylesheet' type='text/css'>
 
   <style type="text/css">
-  :root {
-    --bg: #f7f8fa;
-    --surface: #ffffff;
-    --surface-alt: #fcfcfd;
+    :root {
+      --bg-base: #ffffff;
+      --text-main: #111827;       /* Deep slate grey instead of pure harsh black */
+      --text-muted: #4b5563;      /* Mid-tone grey for metadata and secondary text */
+      --text-light: #9ca3af;      /* Light grey for borders and icons */
+      --accent: #1d4ed8;          /* Professional Deep Royal Blue */
+      --accent-hover: #1e40af;    /* Darker blue for interactions */
+      --card-bg: #ffffff;
+      --card-border: #e5e7eb;     /* Subtle clean borders */
+      --highlight-bg: #f8fafc;    /* Clean, soft tint for featured items */
+      --highlight-border: #cbd5e1;
+      --rule-color: #f3f4f6;
+    }
 
-    --border: #e5e7eb;
-    --border-strong: #d1d5db;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    --text: #111827;
-    --text-light: #4b5563;
-    --muted: #6b7280;
-
-    --accent: #2563eb;
-
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
-    --shadow-md: 0 6px 20px rgba(0,0,0,0.06);
-
-    --radius: 14px;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: "Inter", -apple-system, BlinkMacSystemFont,
-      "Segoe UI", Roboto, sans-serif;
-    line-height: 1.7;
-  }
-
-  body {
-    padding: 40px 20px 80px;
-  }
-
-  .container {
-    max-width: 920px;
-    margin: 0 auto;
-  }
-
-  /* Typography */
-
-  h1,
-  h2,
-  h3 {
-    color: var(--text);
-    margin-top: 0;
-    letter-spacing: -0.02em;
-  }
-
-  h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 40px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 24px;
-    font-weight: 600;
-  }
-
-  p {
-    color: var(--text-light);
-    margin-top: 0;
-  }
-
-  a {
-    color: var(--accent);
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-  }
-
-  a:hover {
-    opacity: 0.7;
-  }
-
-  /* Profile */
-
-  .profile-flex {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-
-    background: var(--surface);
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius);
-    padding: 36px;
-
-    box-shadow: var(--shadow-sm);
-
-    margin-bottom: 56px;
-  }
-
-  .profile-img {
-    flex: 0 0 180px;
-  }
-
-  .profile-img img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-
-    border-radius: 16px;
-    display: block;
-  }
-
-  .profile-info {
-    flex: 1;
-  }
-
-  .social-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin-top: 20px;
-  }
-
-  .social-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    color: var(--text-light);
-    font-size: 0.95rem;
-    font-weight: 500;
-  }
-
-  .social-links i {
-    font-size: 1rem;
-  }
-
-  /* Sections */
-
-  section {
-    margin-bottom: 60px;
-  }
-
-  .news ul {
-    padding-left: 18px;
-    color: var(--text-light);
-  }
-
-  /* Topic header */
-
-  .pub-topic-header {
-    font-size: 0.82rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-
-    color: var(--muted);
-
-    margin-top: 40px;
-    margin-bottom: 20px;
-
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  /* Publication cards */
-
-  .pub-entry {
-    display: flex;
-    gap: 28px;
-
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-
-    border-radius: var(--radius);
-
-    padding: 28px;
-
-    margin-bottom: 28px;
-
-    box-shadow: var(--shadow-sm);
-
-    transition:
-      transform 0.2s ease,
-      box-shadow 0.2s ease,
-      border-color 0.2s ease;
-  }
-
-  .pub-entry:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--border-strong);
-  }
-
-  .pub-entry.highlight {
-    border-left: 4px solid var(--accent);
-  }
-
-  .pub-img {
-    flex: 0 0 220px;
-  }
-
-  .pub-img img {
-    width: 220px;
-    height: 220px;
-    object-fit: contain;
-
-    border-radius: 12px;
-    background: #f9fafb;
-    padding: 10px;
-  }
-
-  .pub-info {
-    flex: 1;
-  }
-
-  .pub-info h3 {
-    font-size: 1.15rem;
-    line-height: 1.4;
-    margin-bottom: 10px;
-    font-weight: 600;
-  }
-
-  .pub-meta {
-    color: var(--muted);
-    font-size: 0.95rem;
-    margin-bottom: 14px;
-  }
-
-  .pub-info a {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-
-    margin-right: 18px;
-    margin-bottom: 10px;
-
-    font-size: 0.95rem;
-    font-weight: 500;
-  }
-
-  .pub-info p {
-    margin-top: 14px;
-  }
-
-  /* Mobile */
-
-  @media (max-width: 720px) {
-
+    html,
     body {
-      padding: 24px 16px 60px;
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
+    .container {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    /* Typography */
     h1 {
-      font-size: 2.2rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      line-height: 1.2;
     }
 
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-top: 48px;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--rule-color);
+    }
+
+    /* Profile Section */
     .profile-flex {
-      flex-direction: column-reverse;
-      text-align: center;
-      padding: 28px;
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      align-items: flex-start;
+      margin-bottom: 16px;
     }
 
+    .profile-info {
+      flex: 1;
+    }
+
+    .profile-info p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .profile-info strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .profile-img {
+      flex: 0 0 180px;
+      max-width: 180px;
+    }
+
+    .profile-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+      border: 1px solid var(--card-border);
+    }
+
+    /* Social Connections */
     .social-links {
-      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.15s ease;
+    }
+
+    .social-links a i {
+      margin-right: 6px;
+      font-size: 1.1rem;
+      color: var(--text-light);
+      transition: color 0.15s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+    }
+
+    .social-links a:hover i {
+      color: var(--accent);
+    }
+
+    /* News Section */
+    .news {
+      margin-bottom: 24px;
+    }
+
+    .news ul {
+      list-style-type: none;
+    }
+
+    .news li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 10px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .news li::before {
+      content: "•";
+      color: var(--text-light);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    .news li strong {
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    /* Publications Section */
+    .pub-topic-header {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-top: 32px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pub-topic-header::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--rule-color);
     }
 
     .pub-entry {
-      flex-direction: column;
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding: 24px;
+      border-radius: 8px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .pub-entry:hover {
+      border-color: var(--highlight-border);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .pub-entry.highlight {
+      background: var(--highlight-bg);
+      border-color: var(--highlight-border);
     }
 
     .pub-img {
-      flex: none;
+      flex: 0 0 160px;
+      max-width: 160px;
     }
 
     .pub-img img {
       width: 100%;
-      height: auto;
-      max-width: 260px;
-      margin: 0 auto;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--card-border);
       display: block;
     }
-  }
+
+    .pub-info {
+      flex: 1;
+    }
+
+    .pub-info h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .pub-meta {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .pub-meta em {
+      font-style: italic;
+      color: var(--text-main);
+    }
+
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .pub-links a {
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      background-color: #ffffff;
+      border: 1px solid var(--card-border);
+      padding: 4px 10px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+    }
+
+    .pub-links a i {
+      color: var(--text-light);
+    }
+
+    .pub-links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      background-color: #f0f4ff;
+    }
+
+    .pub-links a:hover i {
+      color: var(--accent);
+    }
+
+    .pub-info p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Responsive Breakdown */
+    @media (max-width: 640px) {
+      .container {
+        padding: 40px 16px;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      .profile-flex {
+        flex-direction: column-reverse;
+        gap: 24px;
+      }
+
+      .profile-img {
+        max-width: 140px;
+      }
+
+      .pub-entry {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+      }
+
+      .pub-img {
+        max-width: 100%;
+        flex: auto;
+        width: 100%;
+      }
+
+      .pub-img img {
+        height: auto;
+        max-height: 160px;
+      }
+
+      .pub-topic-header::after {
+        display: block;
+      }
+    }
   </style>
 </head>
 
@@ -308,63 +343,57 @@
 
   <div class="container">
 
-    <!-- Name -->
-    <h1>Your Name</h1>
+    <header>
+      <h1>Your Name</h1>
+    </header>
 
-    <!-- Profile -->
     <div class="profile-flex">
 
       <div class="profile-info">
-
         <p>
-          Short introduction about yourself.
+          Short introduction about yourself. Introduce your current role, title, or institutional affiliation here. For instance, you could mention being a researcher, developer, or doctoral candidate.
         </p>
 
         <p>
-          Add your background, interests, research, or experience here.
+          Add your background, interests, research, or experience here. Highlight key methodologies, primary research questions, or industrial specialties you focus on day-to-day.
         </p>
 
         <div class="social-links">
           <a href="#"><i class="fa-solid fa-envelope"></i>Email</a>
-          <a href="#"><i class="fa-solid fa-graduation-cap"></i>Scholar</a>
+          <a href="#"><i class="fa-solid fa-graduation-cap"></i>Google Scholar</a>
           <a href="#"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
           <a href="#"><i class="fa-brands fa-github"></i>GitHub</a>
           <a href="#"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
         </div>
-
       </div>
 
       <div class="profile-img">
-        <img src="./imgs/profile.jpg" alt="Profile Image">
+        <img src="./imgs/profile.jpg" alt="Profile Image" onerror="this.src='https://via.placeholder.com/180'">
       </div>
 
     </div>
 
-    <!-- News -->
     <section class="news">
       <h2>News</h2>
 
       <ul>
-        <li>Example news item.</li>
-        <li>Another update or announcement.</li>
+        <li><strong>June 2026:</strong> Example news item detailing a recent achievement, talk, or paper acceptance.</li>
+        <li><strong>March 2026:</strong> Another update or announcement tracking milestones, travel, or presentations.</li>
       </ul>
     </section>
 
-    <!-- Publications -->
     <section class="pub-section">
 
       <h2>Selected Publications</h2>
 
-      <!-- Topic -->
       <h3 class="pub-topic-header">Research Topic</h3>
 
       <div class="pub-list">
 
-        <!-- Publication -->
         <div class="pub-entry highlight">
 
           <div class="pub-img">
-            <img src="imgs/example.png" alt="Publication Image">
+            <img src="imgs/example.png" alt="Publication Image" onerror="this.src='https://via.placeholder.com/160x110'">
           </div>
 
           <div class="pub-info">
@@ -373,23 +402,55 @@
 
             <div class="pub-meta">
               Author Name, Coauthor Name<br>
-              <em>Conference / Journal Year</em>
+              <em>Conference / Journal, 2026</em>
             </div>
 
-            <a href="#">
-              <i class="fa-solid fa-file-lines"></i>paper
-            </a>
-
-            <a href="#">
-              <i class="fa-brands fa-github"></i>code
-            </a>
-
-            <a href="#">
-              <i class="fa-solid fa-globe"></i>project page
-            </a>
+            <div class="pub-links">
+              <a href="#">
+                <i class="fa-solid fa-file-lines"></i>paper
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-github"></i>code
+              </a>
+              <a href="#">
+                <i class="fa-solid fa-globe"></i>project page
+              </a>
+            </div>
 
             <p>
-              Short description of the project or publication.
+              Short description of the project or publication summarizing the core technical contributions, findings, or performance metrics achieved.
+            </p>
+
+          </div>
+
+        </div>
+        
+        <div class="pub-entry">
+
+          <div class="pub-img">
+            <img src="imgs/example2.png" alt="Publication Image" onerror="this.src='https://via.placeholder.com/160x110'">
+          </div>
+
+          <div class="pub-info">
+
+            <h3>Another Project Reference Title</h3>
+
+            <div class="pub-meta">
+              Author Name, Second Coauthor, Third Coauthor<br>
+              <em>IEEE Transactions on Applied Science, 2025</em>
+            </div>
+
+            <div class="pub-links">
+              <a href="#">
+                <i class="fa-solid fa-file-lines"></i>paper
+              </a>
+              <a href="#">
+                <i class="fa-solid fa-layer-group"></i>dataset
+              </a>
+            </div>
+
+            <p>
+              A precise statement defining a secondary research breakthrough, detailing empirical improvements over baseline experiments.
             </p>
 
           </div>
