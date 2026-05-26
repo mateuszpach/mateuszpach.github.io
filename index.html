@@ -4,28 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name | Academic Portfolio</title>
+  <title>Mateusz Pach</title>
 
   <link rel="shortcut icon" href="imgs/favicon/favicon.ico" type="image/x-icon">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
   <style type="text/css">
     :root {
       --bg-base: #ffffff;
-      --text-main: #111827;       /* Deep slate grey instead of pure harsh black */
-      --text-muted: #4b5563;      /* Mid-tone grey for metadata and secondary text */
-      --text-light: #9ca3af;      /* Light grey for borders and icons */
-      --accent: #1d4ed8;          /* Professional Deep Royal Blue */
-      --accent-hover: #1e40af;    /* Darker blue for interactions */
+      --text-main: #111111;       /* Deep ink black */
+      --text-muted: #444444;      /* Serious charcoal for secondary copy */
+      --text-light: #888888;      /* Slate line accents */
+      --accent: #0f172a;          /* Editorial dark slate for interactive states */
+      --accent-hover: #334155;
       --card-bg: #ffffff;
-      --card-border: #e5e7eb;     /* Subtle clean borders */
-      --highlight-bg: #f8fafc;    /* Clean, soft tint for featured items */
+      --card-border: #e2e8f0;     /* Refined structural lines */
+      --highlight-bg: #f8fafc;    /* Very light scholarly blue-grey tint */
       --highlight-border: #cbd5e1;
-      --rule-color: #f3f4f6;
+      --rule-color: #e2e8f0;
     }
 
     * {
@@ -38,46 +38,45 @@
     body {
       background-color: var(--bg-base);
       color: var(--text-main);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
+      font-family: 'Source Serif 4', Georgia, serif;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
 
     .container {
-      max-width: 840px;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 60px 24px;
+      padding: 80px 24px;
     }
 
-    /* Typography */
+    /* Editorial Typography Structure */
     h1 {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 2.75rem;
+      font-size: 3rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      margin-bottom: 24px;
-      line-height: 1.2;
+      margin-bottom: 32px;
+      line-height: 1.15;
     }
 
     h2 {
-      font-family: 'Inter', sans-serif;
-      font-size: 1.3rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem;
       font-weight: 600;
-      letter-spacing: -0.01em;
-      margin-top: 48px;
-      margin-bottom: 20px;
-      padding-bottom: 8px;
+      margin-top: 56px;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
       border-bottom: 1px solid var(--rule-color);
     }
 
-    /* Profile Section */
+    /* Profile Block */
     .profile-flex {
       display: flex;
       flex-direction: row;
-      gap: 40px;
+      gap: 48px;
       align-items: flex-start;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
     }
 
     .profile-info {
@@ -85,9 +84,9 @@
     }
 
     .profile-info p {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       color: var(--text-muted);
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     .profile-info strong {
@@ -96,30 +95,30 @@
     }
 
     .profile-img {
-      flex: 0 0 180px;
-      max-width: 180px;
+      flex: 0 0 240px;
+      max-width: 240px;
     }
 
     .profile-img img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 6px;
+      border-radius: 4px;
       border: 1px solid var(--card-border);
     }
 
-    /* Social Connections */
+    /* Social Connections Links */
     .social-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 24px;
+      gap: 20px;
+      margin-top: 32px;
     }
 
     .social-links a {
       text-decoration: none;
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 500;
       display: inline-flex;
       align-items: center;
@@ -127,23 +126,24 @@
     }
 
     .social-links a i {
-      margin-right: 6px;
+      margin-right: 8px;
       font-size: 1.1rem;
       color: var(--text-light);
       transition: color 0.15s ease;
     }
 
-    .social-links a:hover {
-      color: var(--accent);
-    }
+    /* .social-links a:hover {
+      color: var(--text-main);
+      text-decoration: underline;
+    } */
 
     .social-links a:hover i {
-      color: var(--accent);
+      color: var(--text-main);
     }
 
-    /* News Section */
+    /* News Elements */
     .news {
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
 
     .news ul {
@@ -152,38 +152,36 @@
 
     .news li {
       position: relative;
-      padding-left: 16px;
-      margin-bottom: 10px;
+      padding-left: 20px;
+      margin-bottom: 12px;
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 1.05rem;
     }
 
     .news li::before {
-      content: "•";
+      content: "—";
       color: var(--text-light);
       position: absolute;
       left: 0;
-      font-weight: bold;
     }
 
     .news li strong {
       color: var(--text-main);
-      font-weight: 500;
+      font-weight: 600;
     }
 
-    /* Publications Section */
+    /* Publications Module */
     .pub-topic-header {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.1rem;
       font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      font-style: italic;
       color: var(--text-muted);
-      margin-top: 32px;
-      margin-bottom: 16px;
+      margin-top: 40px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
     }
 
     .pub-topic-header::after {
@@ -196,37 +194,32 @@
     .pub-entry {
       display: flex;
       flex-direction: row;
-      gap: 24px;
+      gap: 32px;
       align-items: flex-start;
-      margin-bottom: 20px;
-      padding: 24px;
-      border-radius: 8px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .pub-entry:hover {
-      border-color: var(--highlight-border);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      margin-bottom: 24px;
+      padding: 24px 0; /* Pure academic layout cleans card pads, using line breaks */
+      border-bottom: 1px dashed var(--rule-color);
+      background: transparent;
     }
 
     .pub-entry.highlight {
       background: var(--highlight-bg);
-      border-color: var(--highlight-border);
+      padding: 24px;
+      border: 1px solid var(--highlight-border);
+      border-radius: 4px;
     }
 
     .pub-img {
-      flex: 0 0 160px;
-      max-width: 160px;
+      flex: 0 0 250px;
+      max-width: 250px;
     }
 
     .pub-img img {
       width: 100%;
-      height: 110px;
-      object-fit: cover;
-      border-radius: 4px;
-      border: 1px solid var(--card-border);
+      height: 250px;
+      object-fit: contain;
+      border-radius: 2px;
+      /* border: 1px solid var(--card-border); */
       display: block;
     }
 
@@ -235,90 +228,95 @@
     }
 
     .pub-info h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 6px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 8px;
       color: var(--text-main);
     }
 
     .pub-meta {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       line-height: 1.5;
     }
 
     .pub-meta em {
       font-style: italic;
       color: var(--text-main);
+      font-weight: 500;
     }
 
     .pub-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 12px;
+      gap: 12px;
+      margin-bottom: 14px;
     }
 
     .pub-links a {
       text-decoration: none;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       font-weight: 500;
       color: var(--text-muted);
-      background-color: #ffffff;
-      border: 1px solid var(--card-border);
-      padding: 4px 10px;
-      border-radius: 4px;
+      border-bottom: 1px dashed var(--text-light);
+      padding-bottom: 1px;
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
       transition: all 0.15s ease;
     }
 
     .pub-links a i {
+      font-size: 0.85rem;
       color: var(--text-light);
     }
 
     .pub-links a:hover {
-      color: var(--accent);
-      border-color: var(--accent);
-      background-color: #f0f4ff;
+      color: var(--text-main);
+      border-bottom-style: solid;
+      border-bottom-color: var(--text-main);
     }
 
     .pub-links a:hover i {
-      color: var(--accent);
+      color: var(--text-main);
     }
 
     .pub-info p {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    /* Responsive Breakdown */
+    /* Responsive Adaptation */
     @media (max-width: 640px) {
       .container {
-        padding: 40px 16px;
+        padding: 52px 16px;
       }
 
       h1 {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
       }
 
       .profile-flex {
         flex-direction: column-reverse;
-        gap: 24px;
+        gap: 28px;
       }
 
       .profile-img {
-        max-width: 140px;
+        /* max-width: 130px; */
       }
 
       .pub-entry {
         flex-direction: column;
-        gap: 16px;
-        padding: 16px;
+        gap: 20px;
+        padding: 20px 0;
+      }
+
+      .pub-entry.highlight {
+        padding: 20px;
       }
 
       .pub-img {
@@ -329,12 +327,21 @@
 
       .pub-img img {
         height: auto;
-        max-height: 160px;
+        max-height: 150px;
       }
+    }
+    /* Elegant Academic Links */
+    a {
+      color: var(--text-main);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--text-light);
+      transition: all 0.15s ease;
+    }
 
-      .pub-topic-header::after {
-        display: block;
-      }
+    a:hover {
+      color: var(--accent-hover);
+      border-bottom-style: solid;
+      border-bottom-color: var(--accent-hover);
     }
   </style>
 </head>
@@ -344,83 +351,92 @@
   <div class="container">
 
     <header>
-      <h1>Your Name</h1>
+      <h1>Mateusz Pach</h1>
     </header>
 
     <div class="profile-flex">
 
       <div class="profile-info">
         <p>
-          Short introduction about yourself. Introduce your current role, title, or institutional affiliation here. For instance, you could mention being a researcher, developer, or doctoral candidate.
+          I am a PhD researcher at 
+          <a href="https://www.tum.de">Technical University of Munich</a>, where I work on interpreting and adapting multimodal generative models.
         </p>
-
+        
         <p>
-          Add your background, interests, research, or experience here. Highlight key methodologies, primary research questions, or industrial specialties you focus on day-to-day.
+          Previously, I completed my Bachelor's and Master's degrees at 
+          <a href="https://www.uj.edu.pl">Jagiellonian University</a> in Kraków, where I worked with the <a href="http://gmum.net">GMUM</a> research group.
+        </p>
+        
+        <p>
+          I have also done internships at 
+          <a href="https://www.amazon.com">Amazon</a> and 
+          <a href="https://www.gresearch.com">G-Research</a>.
         </p>
 
         <div class="social-links">
-          <a href="#"><i class="fa-solid fa-envelope"></i>Email</a>
-          <a href="#"><i class="fa-solid fa-graduation-cap"></i>Google Scholar</a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
-          <a href="#"><i class="fa-brands fa-github"></i>GitHub</a>
-          <a href="#"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="mateusz.pach@tum.de"><i class="fa-solid fa-envelope"></i>Email</a>
+          <a href="https://scholar.google.com/citations?user=s5FT5bIAAAAJ&hl=en"><i class="fa-solid fa-graduation-cap"></i>Google Scholar</a>
+          <a href="https://github.com/mateuszpach"><i class="fa-brands fa-github"></i>GitHub</a>
+          <a href="https://www.linkedin.com/in/mateusz-pach/"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
         </div>
       </div>
 
       <div class="profile-img">
-        <img src="./imgs/profile.jpg" alt="Profile Image" onerror="this.src='https://via.placeholder.com/180'">
+        <img src="./imgs/profile.jpeg" alt="Profile Image"">
       </div>
 
     </div>
 
-    <section class="news">
+    <!-- <section class="news">
       <h2>News</h2>
 
       <ul>
         <li><strong>June 2026:</strong> Example news item detailing a recent achievement, talk, or paper acceptance.</li>
         <li><strong>March 2026:</strong> Another update or announcement tracking milestones, travel, or presentations.</li>
       </ul>
-    </section>
+    </section> -->
 
     <section class="pub-section">
 
       <h2>Selected Publications</h2>
 
-      <h3 class="pub-topic-header">Research Topic</h3>
+      <!-- <h3 class="pub-topic-header">Research Topic</h3> -->
 
       <div class="pub-list">
 
-        <div class="pub-entry highlight">
+        <div class="pub-entry">
 
           <div class="pub-img">
-            <img src="imgs/example.png" alt="Publication Image" onerror="this.src='https://via.placeholder.com/160x110'">
+            <img src="imgs/lcs.png" alt="Publication Image">
           </div>
 
           <div class="pub-info">
 
-            <h3>Publication Title</h3>
+            <h3>The Latent Color Subspace: Emergent Order in High-Dimensional Chaos</h3>
 
             <div class="pub-meta">
-              Author Name, Coauthor Name<br>
-              <em>Conference / Journal, 2026</em>
+              Mateusz Pach*,
+              <a href="https://jessica-bader.github.io/">Jessica Bader*</a>,
+              <a href="https://qbouniot.github.io/">Quentin Bouniot</a>,
+              <a href="https://serge.belongie.com/">Serge Belongie</a>,
+              <a href="https://www.eml-munich.de/people/zeynep-akata">Zeynep Akata</a><br>
+              <em>ICML 2026</em>
             </div>
 
             <div class="pub-links">
-              <a href="#">
+              <a href="https://arxiv.org/abs/2603.12261">
                 <i class="fa-solid fa-file-lines"></i>paper
               </a>
-              <a href="#">
+              <a href="https://github.com/ExplainableML/LCS">
                 <i class="fa-brands fa-github"></i>code
               </a>
-              <a href="#">
+              <!-- <a href="#">
                 <i class="fa-solid fa-globe"></i>project page
-              </a>
+              </a> -->
             </div>
 
             <p>
-              Short description of the project or publication summarizing the core technical contributions, findings, or performance metrics achieved.
-            </p>
-
+              Inside FLUX’s VAE latent space, we uncover a structured color subspace aligned with Hue, Saturation, and Lightness, enabling training-free color control via closed-form latent manipulation.            </p>
           </div>
 
         </div>
@@ -428,33 +444,145 @@
         <div class="pub-entry">
 
           <div class="pub-img">
-            <img src="imgs/example2.png" alt="Publication Image" onerror="this.src='https://via.placeholder.com/160x110'">
+            <img src="imgs/sae.png" alt="Publication Image">
           </div>
-
+        
           <div class="pub-info">
-
-            <h3>Another Project Reference Title</h3>
-
+        
+            <h3>Sparse Autoencoders Learn Monosemantic Features in Vision-Language Models</h3>
+        
             <div class="pub-meta">
-              Author Name, Second Coauthor, Third Coauthor<br>
-              <em>IEEE Transactions on Applied Science, 2025</em>
+              Mateusz Pach,
+              <a href="https://sgk98.github.io/">Shyamgopal Karthik</a>,
+              <a href="https://qbouniot.github.io/">Quentin Bouniot</a>,
+              <a href="https://serge.belongie.com/">Serge Belongie</a>,
+              <a href="https://www.eml-munich.de/people/zeynep-akata">Zeynep Akata</a>
+              <br>
+              <em>NeurIPS 2025</em>
             </div>
-
+        
             <div class="pub-links">
-              <a href="#">
+              <a href="https://arxiv.org/abs/2504.02821">
                 <i class="fa-solid fa-file-lines"></i>paper
               </a>
-              <a href="#">
-                <i class="fa-solid fa-layer-group"></i>dataset
+              <a href="https://github.com/ExplainableML/sae-for-vlm">
+                <i class="fa-brands fa-github"></i>code
               </a>
             </div>
-
+        
             <p>
-              A precise statement defining a secondary research breakthrough, detailing empirical improvements over baseline experiments.
-            </p>
-
+              With the proposed Monosemanticity Score, we show that SAEs in VLMs discover monosemantic, interpretable features, enabling fine-grained control over learned representations.            </p>
+        
           </div>
+        
+        </div>
 
+        <div class="pub-entry">
+
+          <div class="pub-img">
+            <img src="imgs/stitch.png" alt="Publication Image">
+          </div>
+        
+          <div class="pub-info">
+        
+            <h3>Stitch: Training-Free Position Control in Multimodal Diffusion Transformers</h3>
+        
+            <div class="pub-meta">
+              <a href="https://jessica-bader.github.io/">Jessica Bader*</a>,
+              Mateusz Pach*,
+              <a href="https://mabravo641.github.io/">Maria Bravo</a>,
+              <a href="https://serge.belongie.com/">Serge Belongie</a>,
+              <a href="https://www.eml-munich.de/people/zeynep-akata">Zeynep Akata</a>
+              <br>
+              <em>In Review</em>
+            </div>
+        
+            <div class="pub-links">              
+              <a href="https://arxiv.org/abs/2509.26644">
+                <i class="fa-solid fa-file-lines"></i>paper
+              </a>
+              <a href="https://github.com/ExplainableML/Stitch">
+                <i class="fa-brands fa-github"></i>code
+              </a>
+            </div>
+        
+            <p>
+              Stitch is a training-free method for controlling spatial positioning in modern text-to-image models via attention constraints, splitting generation into sub-regions and stitching them together.          </div>
+        
+        </div>
+
+        <div class="pub-entry">
+
+          <div class="pub-img">
+            <img src="imgs/lucid.png" alt="Publication Image">
+          </div>
+        
+          <div class="pub-info">
+        
+            <h3>LucidPPN: Unambiguous Prototypical Parts Network for User-centric Interpretable Computer Vision</h3>
+        
+            <div class="pub-meta">
+              Mateusz Pach,
+              <a href="https://dawrym.github.io/">Dawid Rymarczyk</a>,
+              <a href="https://www.researchgate.net/profile/Koryna-Lewandowska">Koryna Lewandowska</a>,
+              <a href="https://jacek-tabor.u.matinf.uj.edu.pl/">Jacek Tabor</a>,
+              <a href="https://bartoszzielinski.github.io/">Bartosz Zieliński</a>
+              <br>
+              <em>ICLR 2025</em>
+            </div>
+        
+            <div class="pub-links">
+              <a href="https://openreview.net/pdf?id=BM9qfolt6p">
+                <i class="fa-solid fa-file-lines"></i>paper
+              </a>
+              <a href="https://github.com/mateuszpach/LucidPPN">
+                <i class="fa-brands fa-github"></i>code
+              </a>
+            </div>
+        
+            <p>
+              LucidPPN introduces an interpretable prototypical parts-based method that provides clear, unambiguous visual explanations by disentangling color from all other features used by the network.            </p>
+        
+          </div>
+        
+        </div>
+
+
+        <div class="pub-entry">
+
+          <div class="pub-img">
+            <img src="imgs/tore.png" alt="Publication Image">
+          </div>
+        
+          <div class="pub-info">
+        
+            <h3>TORE: Token Recycling in Vision Transformers for Efficient Active Visual Exploration</h3>
+        
+            <div class="pub-meta">
+              <a href="https://scholar.google.com/citations?user=E0Gzwy4AAAAJ&hl=en&oi=ao">Jan Olszewski</a>,
+              <a href="https://dawrym.github.io/">Dawid Rymarczyk</a>,
+              Piotr Wójcik,
+              Mateusz Pach,
+              <a href="https://bartoszzielinski.github.io/">Bartosz Zieliński</a>
+              <br>
+              <em>WACV 2025</em>
+            </div>
+        
+            <div class="pub-links">
+              <a href="https://openaccess.thecvf.com/content/WACV2025/papers/Olszewski_TORE_Token_Recycling_in_Vision_Transformers_for_Efficient_Active_Visual_WACV_2025_paper.pdf">
+                <i class="fa-solid fa-file-lines"></i>paper
+              </a>
+              <a href="https://github.com/jano1906/TokenRecycling">
+                <i class="fa-brands fa-github"></i>code
+              </a>
+            </div>
+        
+            <p>
+              TORE is a token recycling mechanism, improving efficiency in active visual exploration by reusing informative tokens across processing steps.
+            </p>
+        
+          </div>
+        
         </div>
 
       </div>
