@@ -1,0 +1,266 @@
+a {
+  color: #035397;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:focus,
+a:hover {
+  color: #5089C6;
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus {
+  outline: 2px solid #1772d0;
+  outline-offset: 2px;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Mulish', 'Lato', "Helvetica Neue", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+body {
+  color: #2c2c2c; /* Dark gray text for contrast */
+}
+
+strong {
+  font-family: 'Mulish', 'Lato', "Helvetica Neue", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+}
+
+h2 {
+  margin: 0;
+  font-weight: normal;
+  font-family: 'Mulish', 'Lato', "Helvetica Neue", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 22px;
+}
+
+h1 {
+  margin: 0;
+  font-weight: normal;
+  font-family: 'Mulish', 'Lato', "Helvetica Neue", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 22px;
+}
+
+.papertitle {
+  font-family: 'Mulish', 'Lato', "Helvetica Neue", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.name {
+  padding-top: 20px;
+  margin: 0;
+  font-family: 'Mulish', 'Lato', "Helvetica Neue", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 32px;
+}
+
+.one {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.two {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.one_landscape {
+  width: 320px;
+  height: 160px;
+  position: relative;
+}
+
+.two_landscape {
+  width: 320px;
+  height: 160px;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  image-rendering: auto;
+}
+
+.oral {
+  font-size: 100%;
+  /* color: #F14A16; */
+  /* color: #35589A; */
+  /* color: #00818A; */
+  color: #04293A;
+}
+
+.award {
+  font-size: 100%;
+  color: #F14A16;
+}
+
+.crisp-edges {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+
+.smooth {
+  image-rendering: smooth;
+}
+
+.high-quality {
+  image-rendering: high-quality;
+}
+
+b,
+.strong {
+  font-weight: bold;
+}
+
+#authors {
+  max-width: 750px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.link2 {
+  text-decoration: none;
+  display: inline;
+  margin-right: 5px;
+}
+
+.fakelink {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.bibref {
+  margin-right: 0px;
+  display: none;
+  font-size: 10px;
+  font-family: monospace;
+}
+
+.pre-white-space {
+  white-space: pre-line;
+  text-align: left;
+  -moz-text-align-last: left;
+  text-align-last: left;
+}
+
+@media (max-width: 800px) {
+  body, td, th, tr, p, a {
+    font-size: 16px;
+  }
+  table, td, th {
+    width: 100% !important;
+    box-sizing: border-box;
+    display: block;
+  }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+  .name {
+    font-size: 24px;
+  }
+  h1, h2 {
+    font-size: 18px;
+  }
+  .papertitle {
+    font-size: 14px;
+  }
+  ul, ol {
+    padding-left: 1.2em;
+  }
+  [align="center"] {
+    text-align: center !important;
+  }
+  td[width], th[width] {
+    width: 100% !important;
+  }
+}
+
+.pub-entry {
+  transition: box-shadow 0.2s, transform 0.2s;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(23, 114, 208, 0.06);
+  padding: 24px;
+  align-items: center;
+}
+.pub-entry.highlight {
+  background: #ffffd0;
+}
+.pub-img {
+  flex: 0 0 240px;
+  max-width: 240px;
+  min-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+}
+.pub-img img {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 1px 4px rgba(23, 114, 208, 0.08);
+}
+.pub-info {
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+@media (max-width: 800px) {
+  .pub-entry {
+    flex-direction: column;
+    gap: 18px;
+    padding: 16px;
+    align-items: stretch;
+  }
+  .pub-img {
+    margin-right: 0;
+    margin-bottom: 12px;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .pub-img img {
+    width: 200px;
+    height: 200px;
+  }
+}
